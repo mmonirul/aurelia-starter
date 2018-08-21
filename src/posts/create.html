@@ -1,0 +1,20 @@
+<template>
+  <require from="froala-editor/css/froala_editor.pkgd.min.css"></require>
+  <require from="froala-editor/css/froala_style.min.css"></require>
+  <require from="../resources/elements/summernote-editor"></require>
+  <h2> Create post</h2>
+
+  <froala-editor value.two-way="value" config.bind="{
+      toolbarButtons: ['redo' , '|', 'fontFamily', '|', 'fontSize', '|', 'paragraphFormat', 'color', '|', 'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
+      toolbarButtonsMD: ['redo' , '|', 'fontFamily', '|', 'fontSize', '|', 'paragraphFormat', 'color'],
+      toolbarButtonsSM: ['redo' , '|', 'fontFamily', '|', 'fontSize', '|', 'paragraphFormat', 'color'],
+      toolbarButtonsXS: ['redo' , '|', 'fontFamily', '|', 'fontSize', '|', 'paragraphFormat', 'color'],
+      fontFamilySelection: true,
+      fontSizeSelection: true, height: 300
+  }"></froala-editor>
+
+  <button class="btn btn-outline-info my-3" click.delegate="getValue()">Get value</button>
+
+  <summernote-editor></summernote-editor>
+
+</template>

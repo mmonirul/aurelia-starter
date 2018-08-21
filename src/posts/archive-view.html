@@ -1,0 +1,20 @@
+<template>
+  <require from="../resources/elements/blog-post"></require>
+  <require from="../resources/elements/side-menu"></require>
+  <div class="row mt-3">
+    <div class="col-md-9">
+      <div repeat.for="post of posts">
+        <blog-post post.bind="post"></blog-post>
+        <a route-href="route: post-view; params.bind: { slug: post.slug }">View post &raquo;</a>
+        <hr>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row">
+        <side-menu></side-menu>
+      </div>
+    </div>
+  </div>
+
+
+</template>
