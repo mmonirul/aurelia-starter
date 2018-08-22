@@ -72,6 +72,9 @@ export function configure(aurelia: Aurelia) {
       heightMin: 400
     })
   });
-
+  aurelia.use
+    .standardConfiguration()
+    .developmentLogging()
+    .plugin(PLATFORM.moduleName('aurelia-dialog'));
   return aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
 }
